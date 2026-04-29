@@ -1,0 +1,13 @@
+# Student Information
+name = "Liza"
+is_student = True
+age = 18
+
+# Grade Information
+score = 80.5
+
+# Displaying the data and their types
+print(name, type(name))
+print(is_student, type(is_student))
+print(age, type(age))
+print(score, type(score))
