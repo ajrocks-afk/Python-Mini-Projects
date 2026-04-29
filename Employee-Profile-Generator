@@ -1,0 +1,25 @@
+# 1. Input: Define Employee Data
+first_name = "Marcus"
+last_name = "Holloway"
+employee_id = 4092
+department = "Cybersecurity"
+is_remote = True
+hourly_rate = 45.50
+
+# 2. Logic: Process Data
+# We combine the names into one variable
+full_name = first_name + " " + last_name
+
+# We calculate a sample weekly salary (assuming 40 hours)
+weekly_salary = hourly_rate * 40
+
+# 3. Output: The Profile Generator
+print("-" * 30)
+print(f"EMPLOYEE PROFILE: {full_name.upper()}")
+print("-" * 30)
+print(f"ID Number:  {employee_id}")
+print(f"Department: {department}")
+print(f"Work Type:  {'Remote' if is_remote else 'On-site'}")
+print(f"Rate:       ${hourly_rate}/hr")
+print(f"Est. Week:  ${weekly_salary:,.2f}")
+print("-" * 30)
