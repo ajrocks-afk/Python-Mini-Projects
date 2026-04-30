@@ -1,0 +1,43 @@
+# 1. Setup Pricing Constants
+ADULT_PRICE = 15.00
+CHILD_PRICE = 8.00
+SENIOR_PRICE = 10.00
+
+print("--- Welcome to the Cinema Calc ---")
+
+# 2. Collect User Data
+age = int(input("Enter the viewer's age: "))
+num_tickets = int(input("How many tickets would you like? "))
+day_of_week = input("Is it 'Tuesday'? (yes/no): ").lower()
+
+# 3. Decision Logic (Price Determination)
+if age < 12:
+    ticket_type = "Child"
+    price_per_ticket = CHILD_PRICE
+elif age >= 65:
+    ticket_type = "Senior"
+    price_per_ticket = SENIOR_PRICE
+else:
+    ticket_type = "Adult"
+    price_per_ticket = ADULT_PRICE
+
+# 4. Applying a Special Discount
+# Many theaters have "Discount Tuesdays"
+if day_of_week == "yes":
+    print(" Tuesday Discount Applied: $2.00 off per ticket!")
+    price_per_ticket -= 2.00
+
+# 5. Final Calculation
+total_cost = price_per_ticket * num_tickets
+
+# 6. Output the Ticket
+print("\n" + "═" * 30)
+print(f"      CINEMA RECEIPT      ")
+print("═" * 30)
+print(f"Ticket Type:  {ticket_type}")
+print(f"Quantity:     {num_tickets}")
+print(f"Price Each:   ${price_per_ticket:.2f}")
+print("-" * 30)
+print(f"TOTAL DUE:    ${total_cost:.2f}")
+print("═" * 30)
+print("   Enjoy the show! ")

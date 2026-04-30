@@ -1,0 +1,24 @@
+# 1. Gather Data from the User
+print("--- Welcome to the Bill Splitter ---")
+total_bill = float(input("What was the total bill? $"))
+tip_percentage = int(input("How much tip would you like to give? (e.g. 10, 12, 15): "))
+people_count = int(input("How many people are splitting the bill? "))
+
+# 2. Perform the Calculations
+# Calculate tip amount: (Total * Tip / 100)
+tip_amount = total_bill * (tip_percentage / 100)
+
+# Calculate final total
+final_bill = total_bill + tip_amount
+
+# Calculate amount per person
+amount_per_person = final_bill / people_count
+
+# 3. Display the Results
+print("\n" + "="*30)
+print(f"Subtotal:      ${total_bill:.2f}")
+print(f"Tip ({tip_percentage}%):    ${tip_amount:.2f}")
+print(f"Total Due:     ${final_bill:.2f}")
+print("-" * 30)
+print(f"EACH PERSON PAYS: ${amount_per_person:.2f}")
+print("="*30)
